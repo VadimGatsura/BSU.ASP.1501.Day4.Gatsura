@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
 
-namespace Task1 {
+namespace Task1.NUnitTest {
 
     /// <summary>
     /// Compare two arrays by the sum
     /// </summary>
-    public class SumArrayRowComparator : IArrayComporator<int> {
+    public class SumRowComparator : IComporator<int[]> {
 
         public int Compare(int[] array1, int[] array2)  {
             if (array1 == null && array2 == null)
@@ -27,7 +27,7 @@ namespace Task1 {
     /// <summary>
     /// Compare two arrays by the maximum module in array
     /// </summary>
-    public class MaxAbsArrayElementComparator : IArrayComporator<int> {
+    public class MaxAbsElementComparator : IComporator<int[]> {
         public int Compare(int[] array1, int[] array2) {
             if (array1 == null && array2 == null)
                 return 0;
